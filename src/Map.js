@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import { Map as LeafletMap, TileLayer } from "react-leaflet";
+import "./Map.css";
 
 function Map() {
-    return (
-        <div>
-            i am the map
-        </div>
-    )
+  return (
+    <div className="map">
+      <LeafletMap>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png "
+          attribution='&copy; <a href="http://osm.org/copyright">Openstreetmap</a> contributors'
+        />
+      </LeafletMap>
+    </div>
+  );
 }
 
-export default Map
+export default Map;
